@@ -1,4 +1,4 @@
-/*==========GERAL======================*/
+/*==========GLOBAL======================*/
 
 * {
   margin: 0;
@@ -12,8 +12,14 @@
   --background: #dce9e2;
   --brand-beige: #fffaf1;
   --brand-green-light: #dce9e2;
+  --bg-light: #f7f9f9;
+
   font-size: 62.5%; /*1rem = 10px*/
   --nav-height: 7.2rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -29,6 +35,8 @@ body {
   text-align: center;
 
   overflow: overlay;
+
+  background-color: var(--bg-ligt);
 }
 
 .wrapper {
@@ -41,13 +49,17 @@ ul {
   list-style: none;
 }
 
-/*==========HEADER======================*/
-
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+section {
+  padding: 10rem;
 }
 
-header::before {
+/*==========HOME======================*/
+
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+#home::before {
   content: '';
   width: 100%;
   height: calc(108rem + var(--nav-height));
@@ -60,21 +72,21 @@ header::before {
   z-index: -1;
 }
 
-header h4 {
+#home h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
 
   margin-bottom: 1.6rem;
 }
 
-header h1 {
+#home h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
 
-header p {
+#home p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -82,7 +94,7 @@ header p {
   margin-bottom: 3.2rem;
 }
 
-header button {
+#home button {
   background-color: var(--primary-color);
   color: white;
 
@@ -106,14 +118,14 @@ header button {
   margin-right: auto;
 }
 
-header img {
+#home img {
   width: 26.4rem;
   display: block;
   margin-inline: auto;
   object-position: 0 2rem;
 }
 
-.stats {
+#home .stats {
   width: 32.7rem;
   height: 47rem;
 
@@ -130,7 +142,7 @@ header img {
   gap: 6rem;
 }
 
-.stat h3 {
+#home .stat h3 {
   color: var(--headline);
   font-size: 4.8rem;
   line-height: 130%;
@@ -138,7 +150,7 @@ header img {
   margin-bottom: 0.4rem;
 }
 
-.stat p {
+#home .stat p {
   color: var(--primary-color);
   margin: 0;
   font-style: normal;
@@ -157,6 +169,8 @@ nav {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  z-index: 100;
 }
 
 nav .wrapper {
@@ -206,6 +220,10 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
+.menu {
+  transform: translateY(100%);
+}
+
 body.menu-expanded .menu {
   position: fixed;
   top: 0;
@@ -214,6 +232,8 @@ body.menu-expanded .menu {
   width: 100vw;
   height: 100vh;
   padding-top: var(--nav-height);
+  transition: transform 700ms;
+  transform: translateY(0);
 }
 
 body.menu-expanded nav {
@@ -273,4 +293,49 @@ body.menu-expanded .logo path {
 }
 body.menu-expanded button path {
   stroke: white;
+}
+
+/*==========SERVICES======================*/
+
+#services header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+  text-transform: uppercase;
+
+  letter-spacing: 0.08rem;
+
+  color: var(--primary-color);
+
+  margin-bottom: 1.6rem;
+}
+
+#services header h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+
+  margin-bottom: 6rem;
+}
+
+#sevices .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
+  margin-block: 3.2rem;
+  padding: 2.4rem;
+  text-align: left;
+
+  background: #ffffff;
+
+  border: 1px solid var(--brand-green-light);
+  border-radius: 0.6rem;
+}
+
+#services .card h3 {
+  margin-block: 1.6rem;
 }
