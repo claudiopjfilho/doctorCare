@@ -53,6 +53,29 @@ section {
   padding: 10rem;
 }
 
+.button {
+  background-color: var(--primary-color);
+  color: white;
+
+  border: none;
+  border-radius: 4rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+}
+
 /*==========HOME======================*/
 
 #home {
@@ -70,6 +93,10 @@ section {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+#home .button {
+  margin-inline: auto;
 }
 
 #home h4 {
@@ -92,30 +119,6 @@ section {
   font-weight: 400;
   color: var(--paragraph);
   margin-bottom: 3.2rem;
-}
-
-#home button {
-  background-color: var(--primary-color);
-  color: white;
-
-  border: none;
-  border-radius: 4rem;
-
-  height: 6.2rem;
-  width: 26.3rem;
-
-  margin-bottom: 6rem;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 700;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #home img {
@@ -296,6 +299,12 @@ body.menu-expanded button path {
 
 /*==========SERVICES======================*/
 
+#services {
+  margin-inline: auto;
+  text-align: center;
+  padding: 3rem;
+}
+
 #services header h4 {
   font-size: 1.4rem;
   line-height: 150%;
@@ -341,44 +350,50 @@ body.menu-expanded button path {
 
 /*==========ABOUT======================*/
 
-#about header {
-  display: flex;
-  flex-direction: column;
-
-  margin-inline: auto;
-  align-items: center;
-  width: 37.5rem;
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
 }
 
 #about header h4 {
-  text-align: left;
   color: var(--primary-color);
-  width: 32.7rem;
-  font-weight: 700;
-  font-size: 1.4rem;
-
-  letter-spacing: 0.08em;
-  margin-bottom: 1.6rem;
 }
 
 #about header h2 {
-  display: flex;
-  width: 37.2rem;
+  left: 2.4rem;
+  line-height: 39.06px;
   margin-bottom: 2.4rem;
-  font-size: 3rem;
-  text-align: left;
 }
 
-#about header p {
-  width: 32.7rem;
-
-  font-weight: 400;
-  font-size: 1.6rem;
-  text-align: left;
-
+#about .content p {
+  margin-top: 2.4rem;
   margin-bottom: 6rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
 
-#about img {
+/*==========CONTACT======================*/
+
+#contact {
+  margin-top: 10rem;
   margin-inline: auto;
+  text-align: left;
+  padding: 3rem;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
