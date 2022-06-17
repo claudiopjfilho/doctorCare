@@ -183,7 +183,6 @@ nav.scroll {
   background: var(--primary-color);
   width: 100vw;
 }
-
 nav.scroll svg:nth-child(1) path {
   fill: white;
 }
@@ -232,7 +231,7 @@ body.menu-expanded .menu {
   width: 100vw;
   height: 100vh;
   padding-top: var(--nav-height);
-  transition: transform 700ms;
+  transition: transform 1000ms;
   transform: translateY(0);
 }
 
@@ -338,4 +337,48 @@ body.menu-expanded button path {
 
 #services .card h3 {
   margin-block: 1.6rem;
+}
+
+/*==========ABOUT======================*/
+
+#about header {
+  display: flex;
+  flex-direction: column;
+
+  margin-inline: auto;
+  align-items: center;
+  width: 37.5rem;
+}
+
+#about header h4 {
+  text-align: left;
+  color: var(--primary-color);
+  width: 32.7rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+
+  letter-spacing: 0.08em;
+  margin-bottom: 1.6rem;
+}
+
+#about header h2 {
+  display: flex;
+  width: 37.2rem;
+  margin-bottom: 2.4rem;
+  font-size: 3rem;
+  text-align: left;
+}
+
+#about header p {
+  width: 32.7rem;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-align: left;
+
+  margin-bottom: 6rem;
+}
+
+#about img {
+  margin-inline: auto;
 }
