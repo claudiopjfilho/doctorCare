@@ -13,6 +13,7 @@
   --brand-beige: #fffaf1;
   --brand-green-light: #dce9e2;
   --bg-light: #f7f9f9;
+  --brand-hover: #00453a;
 
   font-size: 62.5%; /*1rem = 10px*/
   --nav-height: 7.2rem;
@@ -74,6 +75,11 @@ section {
   gap: 1.6rem;
 
   text-decoration: none;
+  transition: background 500ms;
+}
+
+.button:hover {
+  background-color: var(--brand-hover);
 }
 
 /*==========HOME======================*/
@@ -396,4 +402,58 @@ body.menu-expanded button path {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+
+/*==========FOOTER======================*/
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+
+  padding-block: 6rem;
+
+  text-align: left;
+}
+
+footer .logo svg {
+  width: 23.5rem;
+  height: 3.1rem;
+
+  margin-bottom: 2.4rem;
+}
+
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  color: var(--brand-beige);
+
+  line-height: 2;
+  margin-bottom: 3.4rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
+}
+
+/*back-to-top-button*/
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: 200ms;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
