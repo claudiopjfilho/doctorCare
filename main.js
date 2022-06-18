@@ -17,7 +17,7 @@ function closeMenu() {
 ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 700
+  duration: 900
 }).reveal(`#home,
 #home img,
 #home .stats,
